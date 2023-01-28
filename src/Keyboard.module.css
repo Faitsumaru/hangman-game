@@ -24,3 +24,9 @@
 .btn:focus:not(:disabled) {
     background-color: hsl(200, 100%, 75%);
 }
+
+canvas {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
