@@ -14,16 +14,18 @@ export function HangmanWord({ guessedLetters, wordToGuess, reveal = false } : Ha
                 fontWeight: "bold",
                 textTransform: "uppercase",
                 fontFamily: "monospace",
+                marginBottom: '.25em'
                 }}
             >
             {wordToGuess.split("").map((letter, idx) => (
-                <span style={{ borderBottom: ".1em solid black" }} key={idx}>
+                <span style={{ borderBottom: ".12em double #595959" }} key={idx}>
                     <span 
                         style={{  
                             visibility: guessedLetters.includes(letter) || reveal 
                             ? "visible"
                             : "hidden",
-                            color: !guessedLetters.includes(letter) && reveal ? "red" : "black",
+                            color: !guessedLetters.includes(letter) && reveal ? "red" : "#595959",
+                            textShadow: '#ffff80 0 0 5px'
                         }}
                     >
                         {letter}

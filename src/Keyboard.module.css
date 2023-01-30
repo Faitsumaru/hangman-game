@@ -8,16 +8,20 @@
     padding: .5rem;
     font-weight: bold;
     cursor: pointer;
-    color: black;
+    color: #353333;
+    text-shadow: rgb(236, 224, 171) 0 0 7px;
+    box-shadow: rgb(177, 223, 230) 0 0 3px;
 }
 
 .btn.active {
     background-color: hsl(200, 100%, 50%);
     color: white;
+    text-shadow: rgb(80, 231, 34) 0 0 10px;
 }
 
 .btn.inactive {
     opacity: .3;
+    text-shadow: rgb(247, 0, 0) 0 0 10px;
 }
 
 .btn:hover:not(:disabled),

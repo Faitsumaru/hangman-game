@@ -4,9 +4,11 @@ import { HangmanDrawing } from "./HangmanDrawing";
 import { HangmanWord } from "./HangmanWord";
 import { Keyboard } from "./Keyboard";
 import { Fireworks } from 'fireworks-js';
+import { ThemeButton } from "./ThemeButton";
+import styles from "./Theme.module.css";
 
 //fireworks
-const app  = document.querySelector('html')
+const app = document.querySelector('html')
 const fireworks = new Fireworks(app as any, {
   autoresize: true,
   opacity: 0.5,
@@ -134,6 +136,7 @@ function App() {
         {isWinner && "Winner! - Refresh to try again"}
         {isLoser && "Nice try - Refresh to try again"}
       </div>
+        <ThemeButton />
         <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
         <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
         <div style={{ alignSelf: "stretch" }}>
