@@ -5,7 +5,6 @@ import { HangmanWord } from "./HangmanWord";
 import { Keyboard } from "./Keyboard";
 import { Fireworks } from 'fireworks-js';
 import { ThemeButton } from "./ThemeButton";
-import styles from "./Theme.module.css";
 
 //fireworks
 const app = document.querySelector('html')
@@ -63,7 +62,6 @@ const fireworks = new Fireworks(app as any, {
 function getWord() {
   return words[Math.floor(Math.random() * words.length)]
 }
-
 function App() {
   const [wordToGuess, setWordToGuess] = useState(getWord)
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
@@ -72,7 +70,9 @@ function App() {
     letter => !wordToGuess.includes(letter)
   )
 
-  const isLoser =  incorrectLetters.length >= 6
+  let attempts = 6
+  const isLoser = incorrectLetters.length >= attempts
+
   const isWinner = wordToGuess
     .split("")
     .every(letter => guessedLetters.includes(letter))
@@ -130,14 +130,14 @@ function App() {
       flexDirection: "column",
       gap: "2rem",
       margin: "0 auto",
-      alignItems: "center"
+      alignItems: "center",
     }}>
-      <div style={{ fontSize: "2rem",  textAlign: "center" }}>
+      <div style={{ fontSize: "2.5rem",  textAlign: "center" }}>
         {isWinner && "Winner! - Refresh to try again"}
         {isLoser && "Nice try - Refresh to try again"}
       </div>
         <ThemeButton />
-        <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
+        <HangmanDrawing numberOfGuesses={incorrectLetters.length} isLoser={isLoser}/>
         <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
         <div style={{ alignSelf: "stretch" }}>
           <Keyboard 
