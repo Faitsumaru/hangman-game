@@ -1,5 +1,4 @@
-import {useEffect, useState} from 'react';
-// import { styles } from './ThemeButton';
+import media from './media.module.css';
 
 type HangmanDrawingProps = {
     numberOfGuesses: number,
@@ -9,7 +8,7 @@ type HangmanDrawingProps = {
 export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDrawingProps) {
 
     const HEAD = (
-        <div style={{
+        <div className={media.drawing_HEAD} style={{
             height: "50px", 
             width: "50px",
             borderRadius: "100%",
@@ -22,7 +21,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
     )
     
     const BODY = (
-        <div style={{
+        <div className={media.drawing_BODY} style={{
             height: "100px", 
             width: "10px",
             background: "#595959",
@@ -34,7 +33,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
     )
     
     const RIGHT_ARM = (
-        <div style={{
+        <div className={media.drawing_RARM} style={{
             height: "10px", 
             width: "100px",
             background: "#595959",
@@ -48,7 +47,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
     )
     
     const LEFT_ARM = (
-        <div style={{
+        <div className={media.drawing_LARM} style={{
             height: "10px", 
             width: "100px",
             background: "#595959",
@@ -62,7 +61,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
     )
     
     const RIGHT_LEG = (
-        <div style={{
+        <div className={media.drawing_RLEG} style={{
             height: "10px", 
             width: "100px",
             background: "#595959",
@@ -76,7 +75,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
     )
 
     const LEFT_LEG = (
-        <div style={{
+        <div className={media.drawing_LLEG} style={{
             height: "10px", 
             width: "100px",
             background: "#595959",
@@ -100,11 +99,11 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
 
         HEAD.props.style.border = '10px solid #cc0000'
     
-        RIGHT_ARM.props.style.rotate = '70deg'
+        RIGHT_ARM.props.style.rotate = '65deg'
         RIGHT_ARM.props.style.right = '-91px'
         RIGHT_ARM.props.style.top = '135px'
 
-        LEFT_ARM.props.style.rotate = '-70deg'
+        LEFT_ARM.props.style.rotate = '-65deg'
         LEFT_ARM.props.style.right = '1px'
         LEFT_ARM.props.style.top = '135px'
 
@@ -114,17 +113,16 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
         LEFT_LEG.props.style.visibility = 'visible'
         LEFT_LEG.props.style.transition = 'all 1s ease-in'
         LEFT_LEG.props.style.background = '#cc0000'
-
     }    
     // console.log(BODY_PARTS[2].props.style.rotate)
 
     return (
-        <div style={{ position: "relative" }}>
+        <div className={media.drawing} style={{ position: "relative" }}>
             { BODY_PARTS.slice(0, numberOfGuesses) }
 
             {LEFT_LEG}
 
-            <div style={{
+            <div className={media.drawing_line1} style={{
                 height: "50px", 
                 width: "10px", 
                 background: "#595959",
@@ -134,7 +132,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
             }} 
             />
             
-            <div style={{ 
+            <div className={media.drawing_line2} style={{ 
                 height: "10px", 
                 width: "200px", 
                 background: "#595959",
@@ -142,7 +140,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
                 }} 
             />
 
-            <div style={{ 
+            <div className={media.drawing_line3} style={{ 
                 height: "400px", 
                 width: "10px", 
                 background: "#595959",
@@ -150,7 +148,7 @@ export function HangmanDrawing({ numberOfGuesses, isLoser = false } : HangmanDra
                 }} 
             />
 
-            <div style={{ 
+            <div className={media.drawing_line4} style={{ 
                 height: "10px", 
                 width: "250px", 
                 background: "#595959" 

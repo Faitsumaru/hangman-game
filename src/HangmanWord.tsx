@@ -1,3 +1,5 @@
+import media from './media.module.css';
+
 type HangmanDrawingProps = {
     guessedLetters: string[]
     wordToGuess: string
@@ -6,7 +8,7 @@ type HangmanDrawingProps = {
 
 export function HangmanWord({ guessedLetters, wordToGuess, reveal = false } : HangmanDrawingProps ) {
     return ( 
-        <div
+        <div className={media.word}
             style={{ 
                 display: "flex", 
                 gap: ".25em", 

@@ -1,4 +1,5 @@
 import styles from "./Keyboard.module.css";
+import media from './media.module.css';
 
 const KEYS = [
     "a",
@@ -38,7 +39,7 @@ type KeyboardProps = {
 
 export function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled = false } : KeyboardProps) {
     return (
-        <div 
+        <div className={media.keyboard}
             style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(75px, 1fr)",
@@ -56,7 +57,8 @@ export function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter, dis
                         className={`${styles.btn} ${isActive ? styles.active : ""}
                             ${
                                 isInactive ? styles.inactive : ""
-                            }`
+                            }
+                            ${media.btn}`
                         }
                         disabled={isInactive || isActive || disabled}
                         key={key}

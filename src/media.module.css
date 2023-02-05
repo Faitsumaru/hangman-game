@@ -1,0 +1,103 @@
+@media (max-width: 520px) {
+    /* drawing */
+    .drawing_line1 {
+        width: 7px !important;
+        height: 20px !important;
+    }
+
+    .drawing_line2 {
+        width: 120px !important;
+        height: 7px !important;
+    }
+
+    .drawing_line3 {
+        width: 7px !important;
+        height: 200px !important;
+    }
+
+    .drawing_line4 {
+        width: 130px !important;
+        height: 7px !important;
+        margin: 0 auto;
+    }
+
+    .drawing_HEAD {
+        height: 25px !important;
+        width: 25px !important;
+        right: -19px !important;
+        top: 20px !important;
+    }
+
+    .drawing_BODY {
+        height: 65px !important;
+        width: 8px !important;
+        right: -1px !important;
+        top: 63px !important;
+    }
+
+    .drawing_RARM {
+        height: 7px !important;
+        width: 55px !important;
+        right: -51px !important;
+        top: 80px !important;
+    }
+
+    .drawing_LARM {
+        height: 7px !important;
+        width: 55px !important;
+        right: 2px !important;
+        top: 80px !important;
+    }
+
+    .drawing_RLEG {
+        height: 7px !important;
+        width: 55px !important;
+        right: -49px !important;
+        top: 121px !important;
+    }
+
+    .drawing_LLEG {
+        height: 7px !important;
+        width: 55px !important;
+        right: 0 !important;
+        top: 121px !important;
+    }
+
+    /* word */
+    .word {
+        font-size: 3rem !important;
+    }
+
+    /* keyboard */
+    .keyboard {
+        grid-template-columns: repeat(auto-fit, minmax(45px, 1fr)) !important
+    }
+
+    .btn {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .app {
+        gap: 1rem !important;
+    }
+
+    .app_text {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (max-width: 330px) {
+    .drawing {
+        margin: 20px 100px 10px 0;
+    }
+
+    .app {
+        gap: 0 !important;
+    }
+
+    .word {
+        margin-bottom: 1.5rem !important;
+    }
+}

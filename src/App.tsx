@@ -5,6 +5,7 @@ import { HangmanWord } from "./HangmanWord";
 import { Keyboard } from "./Keyboard";
 import { Fireworks } from 'fireworks-js';
 import { ThemeButton } from "./ThemeButton";
+import media from './media.module.css';
 
 //fireworks
 const app = document.querySelector('html')
@@ -124,15 +125,16 @@ function App() {
 
   // console.log(wordToGuess);
   return (
-    <div style={{
-      maxWidth: "800px",
+    <div className={media.app} style={{
+      maxWidth: "780px",
       display: "flex",
       flexDirection: "column",
       gap: "2rem",
       margin: "0 auto",
+      padding: "0 10px",
       alignItems: "center",
     }}>
-      <div style={{ fontSize: "2.5rem",  textAlign: "center" }}>
+      <div className={media.app_text} style={{ fontSize: "2.5rem",  textAlign: "center" }}>
         {isWinner && "Winner! - Refresh to try again"}
         {isLoser && "Nice try - Refresh to try again"}
       </div>
