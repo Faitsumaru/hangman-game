@@ -10,17 +10,13 @@ GitHub Pages: https://faitsumaru.github.io/hangman-game;
 
 ## Available Scripts
 Create empty `Vite (react-ts)` project:
-
-    * ### `npm create vite`
+### `npm create vite`
 
 Runs the app:
-
-    * ### `npm run dev`
+### `npm run dev`
 
 React Icons:
-
-    * ### `install react-icons`
+### `npm install react-icons`
 
 Fireworks Effect:
-
-    * ### `npm install fireworks-js`
+### `npm install fireworks-js`
