@@ -20,3 +20,14 @@ React Icons:
 
 Fireworks Effect:
 ### `npm install fireworks-js`
+
+## Documentation
+* React: https://www.w3schools.com/react/default.asp;
+* ViteJS: https://vitejs.dev/guide;
+* TypeScript: https://www.typescriptlang.org/docs;
+* Deploying Vite app to GitHub Pages using GitHub Actions: https://github.com/sitek94/vite-deploy-demo;   
+* FireworksJS: https://github.com/crashmax-dev/fireworks-js;
+* Icons: https://react-icons.github.io/react-icons;
+* Google Fonts: https://fonts.google.com;
+* Git: https://githowto.com/ru;
+* Color Picker: https://www.w3schools.com/colors/colors_picker.asp;
